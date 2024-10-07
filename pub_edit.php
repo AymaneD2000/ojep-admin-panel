@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($stmt->execute()) {
-        header('Location: index.php');
+        header('Location: admin_panel.php');
     } else {
         echo "Error: " . $conn->error;
     }

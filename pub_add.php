@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             // Redirect to the pub list page if successful
-            header('Location: index.php');
+            header('Location: admin_panel.php');
             exit();
         } else {
             echo "Error: " . $conn->error;

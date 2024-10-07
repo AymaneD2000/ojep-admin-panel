@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <div class="container">
-        <h2 class="my-4">Listes des Edit</h2>
+        <h2 class="my-4">Listes des actualités</h2>
         <a href="news_add.php" class="btn btn-success mb-3">Ajouter une actualité</a>
         <table class="table table-bordered">
             <thead>

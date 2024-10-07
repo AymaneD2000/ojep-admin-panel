@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->send_long_data(3, $imgContent);
 
         if ($stmt->execute()) {
-            header('Location: index.php');
+            header('Location: admin_panel.php');
         } else {
             echo "Error: " . $conn->error;
         }
