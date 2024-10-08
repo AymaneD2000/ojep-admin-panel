@@ -28,31 +28,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Ajouter une publicité</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- Link to Bootstrap CSS for responsive design and pre-built components -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h2 class="my-4">Ajouter publicité</h2>
+        <h2 class="mb-4">Ajouter une Publicité</h2>
         <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label>Titre</label>
+            <div class="mb-3">
+                <label class="form-label">Titre</label>
                 <input type="text" class="form-control" name="name" required>
             </div>
-            <div class="form-group">
-                <label>Descriptions</label>
+            <div class="mb-3">
+                <label class="form-label">Descriptions</label>
                 <textarea class="form-control" name="presentation" required></textarea>
             </div>
-            <div class="form-group">
-                <label>Image</label>
+            <div class="mb-3">
+                <label class="form-label">Image</label>
                 <input type="file" class="form-control" name="logo" accept="image/*" required>
             </div>
             <button type="submit" class="btn btn-primary">Ajouter</button>
@@ -60,6 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

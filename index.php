@@ -1,7 +1,9 @@
 <?php
-// Start the session
-session_start();
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 
+ini_set('session.gc_maxlifetime', 1440); // 1440 seconds = 24 minutes
+session_start();
+session_regenerate_id(true);
 // If the user is already logged in, redirect them to the admin panel
 if (isset($_SESSION['user_id'])) {
     header("Location: admin_panel.php");
@@ -85,6 +87,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <div class="login-container">
             <h2 class="login-header">Connexion</h2>
+            <?php
+                if (session_status() == PHP_SESSION_DISABLED) {
+                    echo "Sessions are disabled.";
+                } else {
+                    echo "Sessions are enabled.";
+                }
+                echo session_save_path();
+            ?>
 
             <?php if (isset($error)): ?>
                 <div class="alert alert-danger text-center"><?php echo $error; ?></div>
