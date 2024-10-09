@@ -81,7 +81,7 @@ $user_role = $_SESSION['role']; // This should be set when the user logs in
                         <a class="nav-link active" id="nav-news" onclick="loadSection('news')">Actualités</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav-pub" onclick="loadSection('pub')">Publicités</a>
+                        <a class="nav-link" id="nav-pub" onclick="loadSection('pub')">Défilement</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="nav-comment" onclick="loadSection('comment')">Commentaires</a>

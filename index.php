@@ -87,15 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <div class="login-container">
             <h2 class="login-header">Connexion</h2>
-            <?php
-                if (session_status() == PHP_SESSION_DISABLED) {
-                    echo "Sessions are disabled.";
-                } else {
-                    echo "Sessions are enabled.";
-                }
-                echo session_save_path();
-            ?>
-
             <?php if (isset($error)): ?>
                 <div class="alert alert-danger text-center"><?php echo $error; ?></div>
             <?php endif; ?>
